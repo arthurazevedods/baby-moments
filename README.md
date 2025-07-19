@@ -1,70 +1,61 @@
-# React + TypeScript + Vite
+# Baby Moments
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um MVP de uma aplicação para registrar e acompanhar os momentos do seu bebê.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Registro de Atividades:** Mamada, sono, troca de fralda, medicamento e outros.
+- **Dashboard:** Estatísticas do dia, como quantidade de mamadas, tempo de sono, trocas e última mamada.
+- **Timeline do Dia:** Visualização cronológica das atividades registradas.
+- **Ações Rápidas:** Botões para adicionar atividades comuns com apenas um clique.
+- **Tema Dinâmico:** Alternância entre temas `cupcake` e `bumblebee` (DaisyUI).
+- **Modal de Atividade:** Formulário intuitivo para adicionar novas atividades.
+- **Visualização de Cores:** Página para visualizar as cores dos temas.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TanStack Router](https://tanstack.com/router)
+- [Zustand](https://zustand-demo.pmnd.rs/) (gerenciamento de estado)
+- [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/) (UI e temas)
+- [date-fns](https://date-fns.org/) (manipulação de datas)
+- [Lucide Icons](https://lucide.dev/) (ícones)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Como Utilizar
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+2. **Inicie o projeto:**
+   ```bash
+   npm run dev
+   ```
+3. **Acesse no navegador:**
+   ```
+   http://localhost:5173
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Estrutura do Projeto
+
+```
+src/
+  components/      # Componentes reutilizáveis
+  routes/          # Rotas da aplicação
+  store/           # Gerenciamento de estado (Zustand)
+  assets/          # Imagens e SVGs
+  index.css        # Estilos globais
+  main.tsx         # Ponto de entrada
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como funciona
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Clique em **Nova Atividade** para registrar um novo momento.
+- Use o **switch de tema** para alternar entre os temas visuais.
+- Veja as estatísticas e timeline do dia na tela principal.
+- Acesse a página **Colors** para visualizar as cores dos temas.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# baby-moments
+## Contribuição
+
+Sinta-se à vontade para abrir issues ou PRs para melhorias e correções. Sua ajuda é bem-vinda!

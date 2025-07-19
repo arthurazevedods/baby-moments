@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Colors from "../components/Colors";
 
-export const Route = createFileRoute("/about")({
+export const Route = createFileRoute("/colors")({
   component: About,
 });
 

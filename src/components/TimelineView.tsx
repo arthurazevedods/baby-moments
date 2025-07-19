@@ -1,15 +1,8 @@
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { Baby, Moon, Droplets, Pill, Smile } from "lucide-react";
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export interface Activity {
-  id: string;
-  type: "feeding" | "sleep" | "diaper" | "medicine" | "other";
-  timestamp: Date;
-  duration?: number;
-  details: Record<string, any>;
-  notes?: string;
-}
+import type { Activity } from "../routes/index";
+
 
 interface TimelineViewProps {
   activities: Activity[];

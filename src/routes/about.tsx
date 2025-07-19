@@ -1,9 +1,14 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import Colors from "../components/Colors";
 
-export const Route = createFileRoute('/about')({
+export const Route = createFileRoute("/about")({
   component: About,
-})
+});
 
 function About() {
-  return <div className="p-2">Hello from About!</div>
+  return (
+    <section className="container bg-base-100 flex flex-col mx-auto my-1 ">
+      <Colors />
+    </section>
+  );
 }

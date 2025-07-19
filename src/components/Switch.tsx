@@ -16,9 +16,8 @@ const Switch: React.FC = () => {
           checked={isChecked}
           onChange={handleToggle}
         />
-        <span data-theme="cupcake" className={`absolute cursor-pointer top-0 left-0 right-0 bottom-0 transition duration-400 rounded-xl ${
-          isChecked ? 'bg-primary' : 'bg-secondary'
-        }`}>
+        
+        <span data-theme={`${isChecked ? "cupcake": "bumblebee"}`} className={`absolute bg-primary cursor-pointer top-0 left-0 right-0 bottom-0 transition duration-400 rounded-xl }`}>
           <span data-theme="bumblebee" className={`absolute h-5 w-5 bottom-1.5 left-1.5 rounded-lg bg-white transition duration-400 transform ${
             isChecked ? 'translate-x-6' : ''
           }`}></span>

@@ -13,7 +13,7 @@ const Switch: React.FC = () => {
           checked={theme === 'cupcake'}
           onChange={toggleTheme}
         />
-        <span data-theme={theme} className={`absolute bg-primary cursor-pointer top-0 left-0 right-0 bottom-0 transition duration-400 rounded-xl`}>
+        <span data-theme={theme} className={`absolute bg-secondary cursor-pointer top-0 left-0 right-0 bottom-0 transition duration-400 rounded-xl `}>
           <span
             className={`absolute h-5 w-5 bottom-1.5 left-1.5 rounded-lg bg-white transition duration-400 transform ${
               theme === 'cupcake' ? 'translate-x-6' : ''

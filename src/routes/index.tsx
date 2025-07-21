@@ -41,7 +41,7 @@ function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-secondary" data-theme={theme}>
+    <div className="min-h-screen bg-base-100" data-theme={theme}>
       <Header onNewActivity={() => setShowForm(true)}/>
       <main className="container mx-auto px-4 py-6 space-y-6">
         {/* Stats Overview */}
